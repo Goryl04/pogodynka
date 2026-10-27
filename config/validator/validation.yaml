@@ -1,0 +1,30 @@
+App\Entity\Location:
+    properties:
+        latitude:
+            - Range:
+                  min: -90
+                  max: 90
+                  groups: ['create', 'edit']
+        longitude:
+            - Range:
+                  min: -180
+                  max: 180
+                  groups: ['create', 'edit']
+
+App\Entity\Forecast:
+    properties:
+        Temperature:
+            - Range:
+                  min: -50
+                  max: 60
+                  groups: ['create', 'edit']
+        Humidity:
+            - Range:
+                  min: 0
+                  max: 100
+                  groups: ['create', 'edit']
+        Precipitation:
+            - Range:
+                  min: 0
+                  max: 100
+                  groups: ['create', 'edit']
