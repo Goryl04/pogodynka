@@ -11,7 +11,13 @@
 
         <ul>
             {% for x in forecast %}
-                <li>{{ x.Date|date('d.m.Y') }}: {{ x.Temperature }}&deg;C</li>
+                <li>
+                    <strong>{{ x.Date|date('d.m.Y') }}</strong> —
+                    Temp: {{ x.Temperature }}&deg;C,
+                    Wiatr: {{ x.Wind }} km/h,
+                    Wilgotność: {{ x.Humidity }}%,
+                    Opady: {{ x.Precipitation }} mm
+                </li>
             {% endfor %}
         </ul>
     </main>
