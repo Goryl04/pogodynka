@@ -1,0 +1,6 @@
+{%- apply spaceless -%}
+city,country,date,celsius,fahrenheit,wind,humidity,precipitation
+{% for m in measurements -%}
+{{ city }},{{ country }},{{ m.getDate().format('Y-m-d') }},{{ m.getTemperature() }},{{ m.getFahrenheit() }},{{ m.getWind() }},{{ m.getHumidity() }},{{ m.getPrecipitation() }}
+{% endfor %}
+{%- endapply -%}
